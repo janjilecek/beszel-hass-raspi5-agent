@@ -1,0 +1,21 @@
+name: "Beszel-Agent"
+description: "Beszel monitoring agent for Home Assistant"
+url: "https://github.com/YOUR_USERNAME/YOUR_REPO"
+version: "0.18.4"
+slug: "beszel-agent"
+init: false
+stdin: false
+hassio_api: false
+homeassistant_api: false
+docker_api: true
+host_network: true
+options:
+  public_key: ""
+  port: "45876"
+schema:
+  public_key: str
+  hub_url: str?
+  port: "port?"
+  token: str?
+arch:
+  - aarch64
