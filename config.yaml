@@ -1,6 +1,6 @@
 name: "Beszel-Agent"
 description: "Beszel monitoring agent for Home Assistant"
-url: "https://github.com/YOUR_USERNAME/YOUR_REPO"
+url: "https://github.com/janjilecek/beszel-hass-raspi5-agent"
 version: "0.18.4"
 slug: "beszel-agent"
 init: false
