@@ -10,9 +10,9 @@ fi
 
 PUBLIC_KEY="$(bashio::config 'public_key')"
 
-# --- Validate key looks sane (non-empty, starts with ssh-ed25519 or ssh-rsa) ---
-if [[ -z "$PUBLIC_KEY" || ! "$PUBLIC_KEY" =~ ^ssh-(ed25519|rsa|ecdsa)[[:space:]][A-Za-z0-9+/=]+]]; then
-    bashio::log.error "public_key value looks invalid. Expected ssh-ed25519/rsa/ecdsa key. Exiting."
+# --- Validate key looks sane (non-empty, starts with ssh-) ---
+if [[ -z "$PUBLIC_KEY" || "${PUBLIC_KEY:0:4}" != "ssh-" ]]; then
+    bashio::log.error "public_key value looks invalid. Expected an ssh- key. Exiting."
     exit 1
 fi
 
